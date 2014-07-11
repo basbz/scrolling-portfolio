@@ -1,0 +1,353 @@
+[
+  {
+    "id": 3,
+    "name": "Shell Pernis",
+    "caption": "Our Flexible Flagship",
+    "assets": [
+      {
+        "id": 4,
+        "name": "spread",
+        "type": "img",
+        "src": "ar_shell_ff3_s.jpg",
+        "src_w": 1020,
+        "src_h": 680,
+        "ico": "ar_shell_ff3_tn.jpg",
+        "ico_w": 120,
+        "ico_h": 80
+      },
+      {
+        "id": 5,
+        "name": "spread",
+        "type": "img",
+        "src": "ar_shell_ff4_s.jpg",
+        "src_w": 1020,
+        "src_h": 680,
+        "ico": "ar_shell_ff4_tn.jpg",
+        "ico_w": 120,
+        "ico_h": 80
+      },
+      {
+        "id": 6,
+        "name": "spread",
+        "type": "img",
+        "src": "ar_shell_ff5_s.jpg",
+        "src_w": 1020,
+        "src_h": 678,
+        "ico": "ar_shell_ff5_tn.jpg",
+        "ico_w": 120,
+        "ico_h": 80
+      },
+      {
+        "id": 7,
+        "name": "spread",
+        "type": "img",
+        "src": "ar_shell_ff6_s.jpg",
+        "src_w": 1020,
+        "src_h": 701,
+        "ico": "",
+        "ico_w": null,
+        "ico_h": null
+      },
+      {
+        "id": 8,
+        "name": "spread",
+        "type": "img",
+        "src": "ar_shell_ff7_s.jpg",
+        "src_w": 1020,
+        "src_h": 701,
+        "ico": "ar_shell_ff7_tn.jpg",
+        "ico_w": 120,
+        "ico_h": 82
+      },
+      {
+        "id": 9,
+        "name": "spread",
+        "type": "img",
+        "src": "ar_shell_ff8_s.jpg",
+        "src_w": 1020,
+        "src_h": 701,
+        "ico": "ar_shell_ff8_tn.jpg",
+        "ico_w": 120,
+        "ico_h": 82
+      },
+      {
+        "id": 10,
+        "name": "spread",
+        "type": "img",
+        "src": "ar_shell_ff9_s.jpg",
+        "src_w": 1020,
+        "src_h": 701,
+        "ico": "ar_shell_ff9_tn.jpg",
+        "ico_w": 120,
+        "ico_h": 82
+      },
+      {
+        "id": 11,
+        "name": "omslag editie 2",
+        "type": "img",
+        "src": "ar_shell_ff2_s.jpg",
+        "src_w": 1020,
+        "src_h": 680,
+        "ico": "ar_shell_ff2_tn.jpg",
+        "ico_w": 120,
+        "ico_h": 80
+      },
+      {
+        "id": 2,
+        "name": "omslag editie 1",
+        "type": "img",
+        "src": "ar_shell_ff1_s.jpg",
+        "src_w": 765,
+        "src_h": 1020,
+        "ico": "ar_shell_ff1_tn.jpg",
+        "ico_w": 90,
+        "ico_h": 120
+      }
+    ]
+  },
+  {
+    "id": 2,
+    "name": "Codarts - HMD",
+    "caption": "Open dag affiches",
+    "assets": [
+      {
+        "id": 14,
+        "name": "Codarts affiche",
+        "type": "img",
+        "src": "ar_codarts_opendag_s.jpg",
+        "src_w": 721,
+        "src_h": 1020,
+        "ico": "ar_codarts_opendag_tn.png",
+        "ico_w": 85,
+        "ico_h": 120
+      },
+      {
+        "id": 15,
+        "name": "Codarts lettertype",
+        "type": "img",
+        "src": "ar_codarts_font_abc_s.png",
+        "src_w": 1020,
+        "src_h": 1020,
+        "ico": "ar_codarts_font_abc_tn.png",
+        "ico_w": 120,
+        "ico_h": 55
+      },
+      {
+        "id": 16,
+        "name": "Codarts lettertype",
+        "type": "img",
+        "src": "ar_codarts_font_123_s.png",
+        "src_w": 390,
+        "src_h": 1020,
+        "ico": "ar_codarts_font_123_tn.png",
+        "ico_w": 62,
+        "ico_h": 120
+      },
+      {
+        "id": 17,
+        "name": "Codarts t-shirt",
+        "type": "img",
+        "src": "ar_codarts-havo_t-shirt_s.png",
+        "src_w": 950,
+        "src_h": 1020,
+        "ico": "ar_codarts-havo_t-shirt_tn.png",
+        "ico_w": 112,
+        "ico_h": 120
+      },
+      {
+        "id": 18,
+        "name": "HMD affiche",
+        "type": "img",
+        "src": "ar_hmd_opendag_s.jpg",
+        "src_w": 721,
+        "src_h": 1020,
+        "ico": "ar_hm_opendag_tn.png",
+        "ico_w": 85,
+        "ico_h": 120
+      },
+      {
+        "id": 19,
+        "name": "HMD lettertype",
+        "type": "img",
+        "src": "ar_hmd_font_abc_s.png",
+        "src_w": 1017,
+        "src_h": 1020,
+        "ico": "ar_hmd_font_abc_tn.png",
+        "ico_w": 120,
+        "ico_h": 54
+      },
+      {
+        "id": 20,
+        "name": "HMD lettertype",
+        "type": "img",
+        "src": "ar_hmd_font_123_s.png",
+        "src_w": 390,
+        "src_h": 1020,
+        "ico": "ar_hmd_font_123_tn.png",
+        "ico_w": 62,
+        "ico_h": 120
+      }
+    ]
+  },
+  {
+    "id": 1,
+    "name": "Bewaerschole",
+    "caption": "Visuele identiteit",
+    "assets": [
+      {
+        "id": 21,
+        "name": "envelop",
+        "type": "img",
+        "src": "ar_bewaerschole_envelop2_s.png",
+        "src_w": 1020,
+        "src_h": 723,
+        "ico": "ar_bewaerschole_envelop2_tn.png",
+        "ico_w": 120,
+        "ico_h": 85
+      },
+      {
+        "id": 22,
+        "name": "logo",
+        "type": "img",
+        "src": "",
+        "src_w": null,
+        "src_h": null,
+        "ico": "",
+        "ico_w": null,
+        "ico_h": null
+      },
+      {
+        "id": 23,
+        "name": "uitnodiging",
+        "type": "img",
+        "src": "",
+        "src_w": null,
+        "src_h": null,
+        "ico": "",
+        "ico_w": null,
+        "ico_h": null
+      },
+      {
+        "id": 24,
+        "name": "uitnodiging",
+        "type": "img",
+        "src": "",
+        "src_w": null,
+        "src_h": null,
+        "ico": "",
+        "ico_w": null,
+        "ico_h": null
+      },
+      {
+        "id": 25,
+        "name": "uitnodiging",
+        "type": "img",
+        "src": "",
+        "src_w": null,
+        "src_h": null,
+        "ico": "",
+        "ico_w": null,
+        "ico_h": null
+      },
+      {
+        "id": 26,
+        "name": "uitnodiging",
+        "type": "img",
+        "src": "",
+        "src_w": null,
+        "src_h": null,
+        "ico": "",
+        "ico_w": null,
+        "ico_h": null
+      },
+      {
+        "id": 27,
+        "name": "uitnodiging",
+        "type": "img",
+        "src": "",
+        "src_w": null,
+        "src_h": null,
+        "ico": "",
+        "ico_w": null,
+        "ico_h": null
+      },
+      {
+        "id": 28,
+        "name": "uitnodiging",
+        "type": "img",
+        "src": "",
+        "src_w": null,
+        "src_h": null,
+        "ico": "",
+        "ico_w": null,
+        "ico_h": null
+      },
+      {
+        "id": 29,
+        "name": "uitnodiging",
+        "type": "img",
+        "src": "ar_bewaerschole_uitn_t-e-a_s.jpg",
+        "src_w": 719,
+        "src_h": 1020,
+        "ico": "",
+        "ico_w": null,
+        "ico_h": null
+      },
+      {
+        "id": 30,
+        "name": "uitnodiging",
+        "type": "img",
+        "src": "ar_bewaerschole_uitn_t-e-v_s.jpg",
+        "src_w": 719,
+        "src_h": 1020,
+        "ico": "",
+        "ico_w": null,
+        "ico_h": null
+      },
+      {
+        "id": 31,
+        "name": "website",
+        "type": "img",
+        "src": "bewaerschole_web_carina_s.jpg",
+        "src_w": 1020,
+        "src_h": 774,
+        "ico": "bewaerschole_web_carina_tn.jpg",
+        "ico_w": 120,
+        "ico_h": 91
+      },
+      {
+        "id": 32,
+        "name": "website",
+        "type": "img",
+        "src": "bewaerschole_web_jeroen_s.jpg",
+        "src_w": 1020,
+        "src_h": 774,
+        "ico": "bewaerschole_web_jeroen_tn.jpg",
+        "ico_w": 120,
+        "ico_h": 91
+      },
+      {
+        "id": 33,
+        "name": "website",
+        "type": "img",
+        "src": "bewaerschole_web_n-m_s.jpg",
+        "src_w": 1020,
+        "src_h": 774,
+        "ico": "bewaerschole_web_n-m_tn.jpg",
+        "ico_w": 120,
+        "ico_h": 91
+      },
+      {
+        "id": 34,
+        "name": "informatiebord",
+        "type": "img",
+        "src": "ar_bewaerschole_bord_s.jpg",
+        "src_w": 721,
+        "src_h": 1020,
+        "ico": "ar_bewaerschole_bord_tn.jpg",
+        "ico_w": 85,
+        "ico_h": 120
+      }
+    ]
+  }
+]

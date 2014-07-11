@@ -1,0 +1,111 @@
+html {
+}
+
+body {
+  /*background: #fafafa;*/
+  margin: 0;
+  padding: 0;
+  color: #222;
+  font-size:14px;
+  line-height:19px;
+}
+
+a:link, a:visited {
+  color: #222;
+  text-decoration: none;
+}
+
+#content {
+  position: absolute;
+  left: 24px;
+}
+
+
+#content > .item {
+  position: absolute;
+  display: block;
+}
+
+ul, p {
+  list-style: none;
+  padding: 0;
+  margin:0;
+}
+
+body > nav {
+  position: fixed;
+  left: 24px;
+  bottom: 0;
+}
+
+body > nav > ul {
+  position: relative;
+  padding-bottom:24px;
+}
+
+body > nav > ul > li {
+  width: 312px;
+}
+
+body > nav > ul > li > img  {
+  display: none;
+}
+
+body > nav > ul > li.item,
+body > nav > ul > li .index {
+  font-weight: bold;
+}
+
+.image-item .index {
+  font-weight:bold;
+  width: 100%;
+  text-align: center;
+  padding-top: 1em;
+}
+
+#content > div.item {
+  top:24px;
+  /*background: #f3f3f3;*/
+}
+
+#content > .image-item {
+  top: 20px;
+}
+
+body > nav > .item:first-child {
+  /*margin-left:24px;*/
+}
+
+#content > .item header {
+  width: 336px;
+  float:right;
+  height: 48px;
+  text-align: center;
+}
+
+#content > .item .title {
+  font-weight: bold
+}
+
+.content > ul > .item > .total {
+  text-align: center;
+}
+
+#content > .item >  p.menu {
+  float: left;
+  width: 144px;
+}
+
+#content > .item >  p {
+  float: right;
+  width: 336px;
+}
+
+#content > .item > .menu > span {
+  text-decoration: underline;
+}
+
+.project-index li.active {
+  text-decoration: underline;
+  color: #ddd;
+}

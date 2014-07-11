@@ -1,0 +1,24 @@
+{
+  "name": "scrolling-folio",
+  "version": "0.0.0",
+  "authors": [
+    "Bas Ben Zineb <bas.benzineb@gmail.com>"
+  ],
+  "main": "main.js",
+  "license": "MIT",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "requirejs": "~2.1.11",
+    "normalize-css": "~3.0.1",
+    "modernizr": "~2.6.2",
+    "history.js": "~1.8.0",
+    "handlebars": "~1.3.0"
+  }
+}
