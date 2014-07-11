@@ -17,6 +17,7 @@
         <!-- endbuild -->
     </head>
     <body>
+      <div id="nav"></div>
       <div id="content" style="position:relative; display:block; min-height:1px;"></div>
         <!--[if lt IE 7]>
             <p class="chromeframe">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> or <a href="http://www.google.com/chromeframe/?redirect=true">activate Google Chrome Frame</a> to improve your experience.</p>
@@ -54,11 +55,33 @@
             </p>
           </div>
         </script>
+
         <script id="image-template" type="text/x-handlebars-template">
           <div data-cid="{{cid}}" class="image-item" style="left:{{offset}}px;position:absolute;">
             <div class="content {{orientation}}" style="width:{{width}}px;height:{{height}}px;background:#efefef;">
-              <div class="index">{{index}}</div>
             </div>
+            <div class="index">{{index}}</div>
+          </div>
+        </script>
+
+        <script id="project-thumb-template" type="text/x-handlebars-template">
+          <div data-cid="{{cid}}" class="item" style="left:{{offset}}px; width:{{width}}px;">
+            {{#if name}}{{name}}<br>{{/if}}
+            {{#if caption}}{{caption}}<br>{{/if}}
+          </div>
+        </script>
+
+       <script id="image-thumb-template" type="text/x-handlebars-template">
+          <div data-cid="{{cid}}" class="thumbnail" style="left:{{offset}}px;width:{{width}}px;">
+          {{#if ico}}
+            <img src="//basbenzineb.nl/bucket/thumbnails/{{ico}}"/>
+          {{/if}}
+            <p>
+              <span class="index">{{index}}</span><br>
+              {{#if p_name}}{{p_name}}<br>{{/if}}
+              {{#if p_caption}}{{p_caption}}<br>{{/if}}
+              {{#if name}}{{name}}<br>{{/if}}
+            </p>
           </div>
         </script>
 

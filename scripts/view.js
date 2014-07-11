@@ -11,6 +11,7 @@ define(['templates'], function (Templates) {
     ];
 
     var title = [];
+
     if(item.name)
       title.push(item.name);
 
@@ -26,6 +27,11 @@ define(['templates'], function (Templates) {
     return Templates.project(item);
   }
 
+  function redraw_proj (item) {
+    $('#content > [data-cid="'+ item.cid +'"]').replaceWith(draw_proj(item));
+  }
+
+
   function draw_item (item) {
     if(item.type === 'img')
         return draw_image(item);
@@ -35,6 +41,15 @@ define(['templates'], function (Templates) {
 
   function draw (items, $el) {
     $el.html(items.map(draw_item).join(''));
+  }
+
+  function draw_thumbs (items, $el) {
+    $el.html(items.map(function (item) {
+      if(item.type === 'img')
+       return Templates['image-thumb'](item);
+
+     return Templates['project-thumb'](item);
+    }).join(''));
   }
 
   function redraw ($el, items, dir) {
@@ -64,21 +79,37 @@ define(['templates'], function (Templates) {
     };
   }
 
-
-
   return {
-    mount: function (store, $content) {
-      var win_bounds = bounds.bind(null, $(window));
+    mount: function (store, $content, $thumbs) {
+      var win_bounds = bounds.bind(null, $(window)), content_width, thumbs_width;
 
       store.resize(win_bounds(), function (spec) {
-        stretch($content, spec.last_item.offset + spec.last_item.width);
+        content_width = spec.last_item.offset + spec.last_item.width;
+        thumbs_width = spec.last_thumb.offset + spec.last_thumb.width;
+        stretch($content, content_width);
         draw(spec.items, $content);
+        draw_thumbs(spec.thumbs, $thumbs);
       });
 
       $(window).on('scroll', function () {
-        store.update(win_bounds(), function (spec) {
+        var w_bounds = win_bounds(),
+            f =  w_bounds.offset/ (content_width - w_bounds.limit);
+
+        $thumbs.css('left', -Math.round((thumbs_width - w_bounds.limit) * f));
+
+        store.update(w_bounds, function (spec) {
           redraw($content, spec.items, spec.dir);
         });
+      });
+
+      $('body').on('click', '[data-menu]', function (e) {
+        var cid, index, $this = $(this);
+        e.preventDefault();
+
+        index = Number($this.attr('data-menu'));
+        cid = $this.closest('[data-cid]').attr('data-cid');
+
+        store.switchTab(cid, index, redraw_proj);
       });
     }
   };

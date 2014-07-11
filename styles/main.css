@@ -26,33 +26,25 @@ a:link, a:visited {
   display: block;
 }
 
-ul, p {
+p {
   list-style: none;
   padding: 0;
   margin:0;
 }
 
-body > nav {
+body > #nav {
   position: fixed;
-  left: 24px;
   bottom: 0;
 }
 
-body > nav > ul {
-  position: relative;
-  padding-bottom:24px;
+body > #nav > div {
+  position: absolute;
+  display: block;
+  bottom:24px;
 }
 
-body > nav > ul > li {
-  width: 312px;
-}
-
-body > nav > ul > li > img  {
-  display: none;
-}
-
-body > nav > ul > li.item,
-body > nav > ul > li .index {
+body > #nav > div.item,
+body > #nav > div .index {
   font-weight: bold;
 }
 

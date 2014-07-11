@@ -22,44 +22,31 @@ define(['view'], function (View) {
     };
   }(0));
 
-  function add (data) {
-    store.push(_.extend(data, {
-      cid: cid(),
-      index: ++__index
-    }));
+  function pick (keys, obj, acc) {
+    return keys.reduce(function (acc, key) {
+      acc[key] = obj[key];
+      return acc;
+    }, acc || {});
   }
 
-  function extract_project (proj) {
-    return {
-      id: proj.id,
-      cid: cid(),
-      type: 'proj',
-      name: proj.name,
-      caption: proj.caption,
-      tabIndex: 0
+  function where (spec) {
+    return function (target) {
+      for(var key in spec) {
+        if(!target.hasOwnProperty(key) || target[key] !== spec[key])
+          return false;
+      }
+
+      return true;
     };
   }
 
-  function extract_asset (asset) {
-    asset.cid = cid();
-    return asset;
+  function find(fn, arr) {
+    for(var i = 0, len = arr.length; i < len; i++) {
+      if(fn(arr[i]) === true)
+        return arr[i];
+    }
   }
 
-  function extract_items (projects) {
-    return projects.reduce(function (acc, proj) {
-
-      acc.push(extract_project(proj));
-
-      return proj.assets.reduce(function (acc, asset) {
-        if(asset.type === 'img' && asset.src) {
-          acc.push(extract_asset(asset));
-        }
-
-        return acc;
-
-      }, acc);
-    }, []);
-  }
 
   function resize_image (img) {
     var size = 480;
@@ -92,6 +79,18 @@ define(['view'], function (View) {
       return item;
     });
   }
+
+  function resize_thumbs (items, size) {
+    var offset = 24;
+
+    return items.map(function (item) {
+      item.width = size;
+      item.offset = offset;
+      offset += size;
+      return item;
+    });
+  }
+
 
   function last (arr) {
     return arr[arr.length - 1];
@@ -128,20 +127,31 @@ define(['view'], function (View) {
       del: {start: a.end, end: b.end}
     };
   }
-  //$(window).on('scroll', buffer);
-  $.getJSON('/data/index.json').then(function (json) {
-    var current_range, items = extract_items (json);
+
+  function main (items, thumbs) {
+    var current_range;
 
     $(document).ready(function () {
       View.mount({
+        switchTab: function (cid, tabIndex, callback) {
+          var item = find(where({cid: cid}), items);
+
+          if(item) {
+            item.tabIndex = tabIndex;
+            callback(item);
+          }
+        },
+
         resize: function (spec, callback) {
           var range = select(resize_items(items), spec);
 
           current_range = range;
 
           return callback({
+            thumbs: resize_thumbs(thumbs, 312),
             items: items.slice(range.start, range.end + 1),
-            last_item: last(items)
+            last_item: last(items),
+            last_thumb: last(thumbs)
           });
         },
 
@@ -166,7 +176,48 @@ define(['view'], function (View) {
             }
           });
         }
-      },$('#content'));
+      },$('#content'), $('#nav'));
     });
+  }
+
+  $.getJSON('/data/index.json').then(function (json) {
+    var items = [], thumbs = [], index = 0;
+
+    json.forEach(function (proj) {
+      var c = cid();
+
+      items.push(pick(['id', 'name', 'caption'], proj, {
+        cid: c,
+        type: 'proj',
+        tabIndex: 0
+      }));
+
+      thumbs.push(pick(['id', 'name', 'caption'], proj, {
+        cid: c,
+        type: 'proj'
+      }));
+
+      proj.assets.forEach(function (asset) {
+        var c = cid();
+        index++;
+
+        if(asset.src) {
+
+          items.push(pick(['id', 'name', 'src', 'src_w', 'src_h', 'type'], asset, {
+            cid: c,
+            index: index
+          }));
+
+          thumbs.push(pick(['id', 'name', 'ico', 'ico_w', 'ico_h', 'type'], asset, {
+            index: index,
+            p_name: proj.name,
+            p_caption: proj.caption,
+            cid: c
+          }));
+        }
+      });
+    });
+
+    return main(items, thumbs);
   });
 });
